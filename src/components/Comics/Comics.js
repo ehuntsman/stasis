@@ -36,14 +36,15 @@ class Comics extends Component {
         </nav>
         <div className="comics-container">
           <h1>Comics</h1>
-          {this.state.volumes.map( (volume, index) => {
+            <Volume number="2" />
+          {/* {this.state.volumes.map( (volume, index) => {
             return(
               <div>
                 <h3>{volume.volume_name}</h3>
-                <Volume />
+                <Volume number={volume.id} />
               </div>
             )
-          })}
+          })} */}
         </div>
       </div>
     );

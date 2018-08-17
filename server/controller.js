@@ -26,6 +26,13 @@ module.exports = {
     dbInstance.get_all_news()
     .then( news => res.status(200).send(news) )
     .catch( () => res.status(500).send() );
+  },
+  getComicNumbers: function(req, res, next){
+    const dbInstance = req.app.get('db');
+    const {params} = req;
+    dbInstance.get_comic_numbers([params.id])
+    .then( comicnumbers => {console.log(comicnumbers, "cake"), res.status(200).send(comicnumbers) })
+    .catch( () => res.status(500).send() );
   }
 }
  
