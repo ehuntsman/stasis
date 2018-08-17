@@ -14,13 +14,8 @@ class Volume extends Component {
   componentDidMount(){
     axios.get(`/api/comicnumbers/${this.props.number}`)
     .then(response => {
-      let ordered = response.data
-        .sort(function(a, b) {
-          return a.pageorder > b.pageorder ? 1 : b.pageorder > a.pageorder ? -1 : 0;
-        })
-      console.log(response, "this is the response")
       this.setState({
-        comics: ordered
+        comics: response.data
       })
 
     }
@@ -44,7 +39,7 @@ class Volume extends Component {
               console.log(this.state.comics, "********************comics", this.props.number)
               return(
                 <li className="comic-number-box">
-                  {comic.page_number} - {comic.pageorder}
+                  {comic.page_number}
                 </li>
               )
             })}
