@@ -36,9 +36,8 @@ module.exports = {
   },
   getComic: function(req, res, next){
     const dbInstance = req.app.get('db');
-    dbInstance.get_all_volumes()
-    .then( volumes => res.status(200).send(volumes) )
+    dbInstance.get_comic([params.id])
+    .then( comic => res.status(200).send(comic[0]) )
     .catch( () => res.status(500).send() );
   },
 }
- 
