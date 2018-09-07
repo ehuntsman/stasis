@@ -31,7 +31,7 @@
     "node": "8.2.1"
   },
   "devDependencies": {
-    "react-scripts": "^1.1.4"
+    "react-scripts": "^1.1.5"
   },
   "scripts": {
     "start-js": "react-scripts start",
