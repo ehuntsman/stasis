@@ -33,6 +33,12 @@ module.exports = {
     dbInstance.get_comic_numbers([params.id])
     .then( comicnumbers => {console.log(comicnumbers, "cake"), res.status(200).send(comicnumbers) })
     .catch( () => res.status(500).send() );
-  }
+  },
+  getComic: function(req, res, next){
+    const dbInstance = req.app.get('db');
+    dbInstance.get_all_volumes()
+    .then( volumes => res.status(200).send(volumes) )
+    .catch( () => res.status(500).send() );
+  },
 }
  

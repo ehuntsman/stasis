@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 
 import prolouge from '../../images/prolouge.png';
 
@@ -36,10 +37,11 @@ class Volume extends Component {
         <div className="comic-numbers-container">
           <ul>
             {this.state.comics.map( (comic, index) => {
-              console.log(this.state.comics, "********************comics", this.props.number)
               return(
                 <li className="comic-number-box">
-                  {comic.page_number}
+                  <Link to={`/comic/${comic.id}`}>
+                    {comic.page_number}
+                  </Link>
                 </li>
               )
             })}

@@ -18,8 +18,10 @@ massive(secrets.connectionString).then(db => {
 const PORT = 3001;
 
 app.get('/api/volumes', ctrl.getAllVolumes);
-app.get('/app/news', ctrl.getAllNews);
+app.get('/api/news', ctrl.getAllNews);
 app.get('/api/comicnumbers/:id', ctrl.getComicNumbers);
+
+app.get('/api/comic/:id', ctrl.getComic);
 
 // app.get("/api/articles", ctrl.getArticles);
 // app.get('/api/getSaved', ctrl.getSaved);

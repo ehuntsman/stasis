@@ -39,13 +39,18 @@
   }
   li {
     height: 35px;
-    // width: 50px;
+    min-width: 50px;
     text-align: center;
     line-height: 35px;
     background: green;
     color: #ccc;
     padding: 0 10px;
     margin: 0 5px 10px 5px;
+    border-radius: 3px;
+    a {
+      text-decoration: none;
+      color: #ccc;
+    }
   }
 }
 
