@@ -2,7 +2,7 @@
   "name": "colette",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3001",
+  "proxy": "https://stasis-react.herokuapp.com/",
   "main": "./server/index.js",
   "dependencies": {
     "axios": "^0.16.2",
