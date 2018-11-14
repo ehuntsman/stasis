@@ -10,7 +10,7 @@ class News extends Component {
   }
 
   componentDidMount(){
-    axios.get("/api/news")
+    axios.get("/api/latestnews")
     .then(response => 
       this.setState({
         news: response.data
@@ -19,9 +19,16 @@ class News extends Component {
   }
 
   render() {
+    console.log(this.state.news, "NEWS")
     return (
       <div className="news-container">
-        
+        {this.state.news.map( (article, index) => {
+          return(
+          <div key={index}>
+            <p>{article.news_header}</p>
+          </div>
+          )
+        })}
       </div>
     );
   }

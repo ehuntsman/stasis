@@ -6,7 +6,7 @@ import News from './News';
 class Home extends Component {
   render() {
     return (
-      <div>
+      <div className="home-container">
         <div className="top-bar">
           <div className="top-bar-hero">
           </div>

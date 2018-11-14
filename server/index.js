@@ -11,16 +11,21 @@ const app = express();
 app.use(cors());
 app.use(json());
 
-massive(secrets.connectionString).then(db => {
-  app.set("db", db);
-}).catch(console.log);
+
+massive(secrets.connectionString)
+  .then(db => {
+    app.set("db", db);
+  })
+  .catch(console.log);
+
  
 const PORT = 3001;
 
 app.get('/api/volumes', ctrl.getAllVolumes);
 app.get('/api/news', ctrl.getAllNews);
-app.get('/api/comicnumbers/:id', ctrl.getComicNumbers);
+app.get('/api/latestnews', ctrl.getLatestNews);
 
+app.get('/api/comicnumbers/:id', ctrl.getComicNumbers);
 app.get('/api/comic/:id', ctrl.getComic);
 
 // app.get("/api/articles", ctrl.getArticles);
