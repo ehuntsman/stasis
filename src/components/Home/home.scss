@@ -1,11 +1,25 @@
 @import "../../App.scss";
 
+.home-container {
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns: auto 1200px auto;
+}
+
+.top-bar {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.home-body {
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+
 .top-bar-hero {
   height: 300px;
-  width: 100%;
   background: url('../../images/herohome.png');
   background-size: cover;
-  display: block;
 }
 
 .home-body {

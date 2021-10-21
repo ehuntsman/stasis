@@ -3,13 +3,17 @@ const cors = require("cors");
 const { json } = require("body-parser");
 const massive = require('massive');
 
+
 const ctrl = require("./controller.js");
 
 const app = express();
 app.use(cors());
 app.use(json());
 
-var connectionString = process.env['CONNECTION_STRING']
+
+// var connectionString = process.env['CONNECTION_STRING']
+const secrets = require('./secrets.js');
+var connectionString = secrets.connectionString
 
 massive(connectionString)
   .then(db => {

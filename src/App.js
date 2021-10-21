@@ -12,7 +12,9 @@ class App extends Component {
       <div className="App">
         <Navi />
         {router}
-        <Footer />
+        <div className="footer">
+          <Footer />
+        </div>
       </div>
     );
   }

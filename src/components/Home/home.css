@@ -1,20 +1,32 @@
 @import url("https://fonts.googleapis.com/css?family=Eagle+Lake");
 @import url("https://fonts.googleapis.com/css?family=Sawarabi+Mincho");
-body {
+body, html {
   margin: 0;
   padding: 0;
   background-color: #E2E2E2;
-  font-family: 'Sawarabi Mincho', sans-serif; }
+  font-family: 'Sawarabi Mincho', sans-serif;
+  height: 100vh; }
 
 ul {
   list-style: none; }
 
+.home-container {
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns: auto 1200px auto; }
+
+.top-bar {
+  grid-column-start: 1;
+  grid-column-end: 4; }
+
+.home-body {
+  grid-column-start: 2;
+  grid-column-end: 2; }
+
 .top-bar-hero {
   height: 300px;
-  width: 100%;
   background: url("../../images/herohome.png");
-  background-size: cover;
-  display: block; }
+  background-size: cover; }
 
 .home-body {
   max-width: 900px;
